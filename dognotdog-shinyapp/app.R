@@ -1,3 +1,7 @@
+##Written  by Roshan Noronha
+##September 17, 2019
+##A R shiny app that classifies and image as "dog" or "not dog"
+
 #install packages if missing
 if (!require(shiny)) {
   install.packages("shiny")
