@@ -76,6 +76,7 @@ server <- function(input, output) {
   
   defDog <- function(imagePath) {
     
+    #need to convert R vector to a python list since load_img is a python function
     testImage <- keras$preprocessing$image$load_img(path=imagePath, target_size = r_to_py(c(224L, 224L)))
     testImage <- keras$preprocessing$image$img_to_array(testImage, data_format = "channels_last")
     testImage <- keras$backend$expand_dims(testImage, axis = 0L)
